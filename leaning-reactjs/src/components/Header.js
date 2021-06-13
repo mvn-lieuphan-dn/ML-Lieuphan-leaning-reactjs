@@ -1,13 +1,13 @@
 import logo from './../logo.svg';
-export default function Header() {
+export default function Header(props) {
   return (
     <header className="header-page">
       <div className="container header-wrapper flex">
         <div className="header-left flex">
           <img src={logo} className="header-logo" alt="logo"/>
           <ul className="menu-list flex">
-            <li className="menu-item"><a className="menu-item-link" href="#">Docs</a></li>
-            <li className="menu-item"><a className="menu-item-link" href="#">Tutorial</a></li>
+            <li className="menu-item"><a className="menu-item-link" onClick={() => {props.handleChangePage('home')}} href="#">Home</a></li>
+            <li className="menu-item"><a className="menu-item-link" onClick={() => {props.handleChangePage('about')}} href="#">About</a></li>
             <li className="menu-item"><a className="menu-item-link" href="#">Blog</a></li>
             <li className="menu-item"><a className="menu-item-link" href="#">Community</a></li>
           </ul>
