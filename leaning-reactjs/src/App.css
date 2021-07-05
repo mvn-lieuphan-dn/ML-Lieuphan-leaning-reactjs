@@ -1,31 +1,69 @@
-.App {
-  text-align: center;
+ul {
+  list-style-type: none;
 }
-
-.App-logo {
+ul li a {
+  text-decoration: none;
+}
+.flex {
+  display: flex;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+/* header */
+.header-page {
+  background-color: #57c1c1;
+  color: #ffffff;
+  width: 100%;
+  padding: 5px 0px;
+}
+.header-page .header-wrapper {
+  justify-content: space-between;
+}
+.header-left .header-logo {
+  width: 80px;
+}
+.menu-list .menu-item {
+  padding: 0px 10px;
+}
+.menu-list .menu-item .menu-item-link {
+  color: #ffffff;
+}
+.header-right li {
+  padding: 0px 10px;
+}
+.header-right li:last-child {
+  padding-right: 0px;
+}
+.header-right li a {
+  color: #ffffff;
+}
+/* main */
+.main-page {
+  min-height: calc(100vh - 104px);
+}
+.main-page .title {
+  padding-top: 50px;
+  text-align: center;
+  font-size: 30px;
+  margin: 0;
+}
+.main-page .app-logo {
   height: 40vmin;
   pointer-events: none;
+  animation: App-logo-spin infinite 20s linear;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* footer */
+.footer-page {
+  background-color: #57c1c1;
+  padding: 10px 0px;
+  text-align: center;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
+.coppy-right {
+  color: #ffffff;
 }
 
 @keyframes App-logo-spin {
@@ -35,4 +73,133 @@
   to {
     transform: rotate(360deg);
   }
+}
+/* form */
+.form-register {
+  width: 40%;
+  padding: 0 30px;
+}
+.table-register {
+  width: 60%;
+}
+.form-group {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+.form-group .form-label {
+  margin-bottom: 10px;
+  color: gray;
+}
+.form-group .form-control {
+  border: none;
+  border-bottom: 1px solid gray;
+  height: 35px;
+  font-size: 16px;
+}
+.btn-submit {
+  width: 100%;
+  border-radius: 8px;
+  padding: 15px;
+  font-size: 16px;
+  color: #ffffff;
+  font-weight: bold;
+  background-color: rgb(38, 206, 16);
+  margin: 20px 0 30px;
+  border-color: rgb(38, 206, 16);
+}
+select,textarea, input:focus-visible {
+  outline: -webkit-focus-ring-color auto 1px;
+    outline-color: -webkit-focus-ring-color;
+    outline-style: auto;
+    outline-width: 0px;
+}
+
+[type="radio"]:checked,
+[type="radio"]:not(:checked) {
+    position: absolute;
+    left: -9999px;
+}
+[type="radio"]:checked + label,
+[type="radio"]:not(:checked) + label
+{
+    position: relative;
+    padding-left: 28px;
+    cursor: pointer;
+    line-height: 20px;
+    display: inline-block;
+    color: #666;
+}
+[type="radio"]:checked + label:before,
+[type="radio"]:not(:checked) + label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #ddd;
+    border-radius: 100%;
+    background: #fff;
+}
+[type="radio"]:checked + label:after,
+[type="radio"]:not(:checked) + label:after {
+    content: '';
+    width: 12px;
+    height: 12px;
+    background: rgb(47, 12, 243);
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    border-radius: 100%;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+[type="radio"]:not(:checked) + label:after {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+[type="radio"]:checked + label:after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+.mr-20 {
+  margin-right: 20px;
+}
+textarea {
+  height: 100px;
+}
+
+/* table */
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 10px;
+  word-break: break-all;
+}
+th {
+  word-break: keep-all;
+}
+
+.table-register {
+  margin-top: 50px;
+}
+.form-group textarea {
+  padding: 10px;
+  font-size: 16px;
+}
+.btn-delete {
+  background-color: red;
+  border: 1px solid black;
+  border-radius: 50%;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  width: 30px;
+  height: 30px;
+  margin: 0 auto;
+  display: block;
+  cursor: pointer;
 }
