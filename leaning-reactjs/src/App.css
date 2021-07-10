@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
 ul {
   list-style-type: none;
 }
@@ -15,22 +20,28 @@ ul li a {
 }
 /* header */
 .header-page {
-  background-color: #20232a;
-  color: #ffffff;
+  background-color: initial;
+  color: #20232a;
   width: 100%;
-  padding: 5px 0px;
 }
 .header-page .header-wrapper {
   justify-content: space-between;
+  background-color: #75dfff61;
 }
 .header-left .header-logo {
   width: 80px;
+}
+.menu-list {
+  margin-bottom: 0;
 }
 .menu-list .menu-item {
   padding: 0px 10px;
 }
 .menu-list .menu-item .menu-item-link {
-  color: #ffffff;
+  color: #000000;
+}
+.menu-list .active {
+  border-bottom: 3px solid #90e090;
 }
 .header-right li {
   padding: 0px 10px;
@@ -39,13 +50,15 @@ ul li a {
   padding-right: 0px;
 }
 .header-right li a {
-  color: #ffffff;
+  color: #000000;
 }
 /* main */
 .main-page {
-  background-color: #e6e9ee;
   text-align: center;
-  min-height: calc(100vh - 104px);
+}
+.bg-main {
+  min-height: calc(100vh - 121px);
+  background-color: #FBFBFB;
 }
 .main-page .title {
   font-size: 45px;
@@ -58,12 +71,16 @@ ul li a {
 }
 /* footer */
 .footer-page {
-  background-color: #20232a;
-  padding: 10px 0px;
+  background-color: initial;
   text-align: center;
 }
+.footer-page div {
+  background-color: #75dfff61;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
 .coppy-right {
-  color: #ffffff;
+  color: #20232a;
 }
 
 @keyframes App-logo-spin {
@@ -73,4 +90,41 @@ ul li a {
   to {
     transform: rotate(360deg);
   }
+}
+/* list */
+.users {
+  padding-top: 30px;
+}
+.users .user {
+  margin-bottom: 20px;
+}
+.users .user .wrapper {
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
+}
+.user .wrapper img {
+  border-radius: 50%;
+  width: 128px;
+  height: 128px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.main-page .actions .btn-page {
+  margin: 0 3px;
+  border-radius: 3px;
+  padding: 3px 10px;
+  color: rgb(12, 12, 29);
+  background-color: white;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
+  outline: none;
+}
+.main-page .actions .active {
+  background-color: turquoise;
+}
+.main-page .actions .btn-page:hover,
+.main-page .actions .btn-page:active {
+  background-color: turquoise;
 }
