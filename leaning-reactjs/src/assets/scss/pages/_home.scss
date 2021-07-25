@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+ul {
+  list-style-type: none;
+}
+ul li a {
+  text-decoration: none;
+}
+.flex {
+  display: flex;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+/* header */
+.header-page {
+  background-color: initial;
+  color: #20232a;
+  width: 100%;
+}
+.header-page .header-wrapper {
+  justify-content: space-between;
+  background-color: #75dfff61;
+}
+.header-left .header-logo {
+  width: 80px;
+}
+.menu-list {
+  margin-bottom: 0;
+}
+.menu-list .menu-item {
+  padding: 0px 10px;
+}
+.menu-list .menu-item .menu-item-link {
+  color: #000000;
+}
+.header-right li {
+  padding: 0px 10px;
+}
+.header-right li:last-child {
+  padding-right: 0px;
+}
+.header-right li a {
+  color: #000000;
+}
+/* main */
+.home-page {
+  text-align: center;
+  .user {
+    .wrapper {
+      img {
+        border-radius: 50%;
+        width: 165px;
+        height: 165px;
+      }
+    }
+  }
+}
+.bg-main {
+  min-height: calc(100vh - 121px);
+  background-color: #FBFBFB;
+}
+.main-page .title {
+  font-size: 45px;
+  margin: 0;
+}
+/* footer */
+.footer-page {
+  background-color: initial;
+  text-align: center;
+}
+.footer-page div {
+  background-color: #75dfff61;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.coppy-right {
+  color: #20232a;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* list */
+.users {
+  padding-top: 30px;
+}
+.users .user {
+  margin-bottom: 20px;
+}
+.users .user .wrapper {
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
+}
+.user .wrapper img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.main-page .actions .btn-page {
+  margin: 0 3px;
+  border-radius: 3px;
+  padding: 3px 10px;
+  color: rgb(12, 12, 29);
+  background-color: white;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
+  outline: none;
+}
+.main-page .actions .active {
+  background-color: turquoise;
+}
+.main-page .actions .btn-page:hover,
+.main-page .actions .btn-page:active {
+  background-color: turquoise;
+}
+.banner {
+  width: 100%;
+  height: 512px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-image: url('https://1.bp.blogspot.com/-graWeBP10N4/Xms8GaIVUWI/AAAAAAAAE9Y/KAWLaZi3uysdC3zxN2BnXyVusniTy12CACLcBGAsYHQ/s1600/banner%2Bwebsite%2Bsen%2Bda%2Bha%2Bdong%2Bsaturday%2Bgarden.jpg');
+}
