@@ -7,7 +7,6 @@ function Login() {
     email: 'lieu.phan@monstar-lab.com',
     password: '1111'
   }
-
   const [user, setUser] = useState({name: '', email: ''});
   const [userErr, setUserErr] = useState('');
   function Login(details) {
@@ -17,8 +16,6 @@ function Login() {
         name: details.name,
         email: details.email
       });
-      localStorage.setItem('isLogined', true);
-      history.push('/account');
     }
     else {
       setUserErr('Detail do not match!')

@@ -85,13 +85,13 @@ export const PRODUCTS = [
   },
   {
     id: 15,
-    img: 'https://lh3.googleusercontent.com/proxy/8rgR6P03fABZ0o5kd3b8rigS2lhVE_Tey5woN4lqE4sTVQevXdQDkqQ1p5cT33Kch-x_LHTQTvrd008BMvf3rSXEy1zwvh74WF1NKjDdVbOB6qSdKI72qz2C5HYcysmFmlkbQRhD-iYYQ_ODaV62vl0HtYFOxks',
+    img: 'https://previews.123rf.com/images/quangpraha/quangpraha1702/quangpraha170200450/71733748-close-up-succulent-plants-stone-lotus-.jpg',
     name: 'stone lotus',
     price: '$1000'
   },
   {
     id: 16,
-    img: 'https://lh3.googleusercontent.com/proxy/FkPq3u-dxun2HHndVfTLLZPqod6j8g0EC_WO9yDGri_Eu6eichXclT1mpFUYtqCPZ9Ar_8OMiVcZ0fQWenxsG4P2BPmPsvRomuyp90kOL7eX6TwwjL8foDplidIzPwFD',
+    img: 'https://img.alicdn.com/imgextra/i2/114531069/O1CN011JldrKkfa7ZDp2s_!!114531069.jpg',
     name: 'stone lotus',
     price: '$1000'
   },
