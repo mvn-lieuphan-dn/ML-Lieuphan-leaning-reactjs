@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useHistory } from "react-router-dom";
 import { PRODUCTS } from '../../../core/utils/product';
+import Box from './../../../components/commons/box';
 export default function Product() {
   const [products, setProducts] = useState(PRODUCTS);
   const history = useHistory();
@@ -13,12 +14,8 @@ export default function Product() {
         <ul className="users row">
           {
             products.map((p) => 
-              <li key={p.id} className="user col-3">
-                <div className="wrapper" onClick={() => showDetailProduct(p.id)}>
-                  <img src={p.img}></img>
-                  <h3 className="name">{p.name}</h3>
-                  <p className="mail">{p.price}</p>
-                </div>
+              <li key={p.id} className="box col-3">
+                <Box product={p} />
               </li>
             )
           }

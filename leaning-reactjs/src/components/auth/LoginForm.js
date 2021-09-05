@@ -7,16 +7,11 @@ function LoginForm(props) {
   function submitHandler(e) {
     e.preventDefault();
     auth.login(form.email, form.password)
-    props.Login(form);
   }
   return (
     <div className="page-login">
       <div className="container">
         <h2 className="text-center mg-t-10 mg-b-5">LOGIN</h2>
-        {
-          props.userErr && 
-        <div className="msgErr">{props.userErr}</div>
-        }
         <form onSubmit={submitHandler}>
           <div className="form-group mg-b-6">
             <label htmlFor="email" className="mg-b-3">Email:</label>

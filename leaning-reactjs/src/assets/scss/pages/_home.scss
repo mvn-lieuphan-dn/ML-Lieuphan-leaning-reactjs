@@ -7,37 +7,6 @@
   margin: 0 auto;
   max-width: 1200px;
 }
-/* header */
-.header-page {
-  background-color: initial;
-  color: #20232a;
-  width: 100%;
-}
-.header-page .header-wrapper {
-  justify-content: space-between;
-  background-color: #75dfff61;
-}
-.header-left .header-logo {
-  width: 80px;
-}
-.menu-list {
-  margin-bottom: 0;
-}
-.menu-list .menu-item {
-  padding: 0px 10px;
-}
-.menu-list .menu-item .menu-item-link {
-  color: #000000;
-}
-.header-right li {
-  padding: 0px 10px;
-}
-.header-right li:last-child {
-  padding-right: 0px;
-}
-.header-right li a {
-  color: #000000;
-}
 /* main */
 .home-page {
   text-align: center;
@@ -59,20 +28,9 @@
   font-size: 45px;
   margin: 0;
 }
-/* footer */
-.footer-page {
-  background-color: initial;
-  text-align: center;
+.page-main {
+  min-height: calc(100vh - 57px - 61px);
 }
-.footer-page div {
-  background-color: #75dfff61;
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-.coppy-right {
-  color: #20232a;
-}
-
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -93,6 +51,7 @@
   padding: 10px;
   border-radius: 8px;
   box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
 }
 .user .wrapper img {
   width: 100%;
@@ -101,6 +60,17 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+.user {
+  .icon-fav {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    font-size: 20px;
+    &:hover {
+      color: red;
+    }
+  }
 }
 .main-page .actions .btn-page {
   margin: 0 3px;

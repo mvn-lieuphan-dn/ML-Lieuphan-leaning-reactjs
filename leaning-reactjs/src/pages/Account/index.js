@@ -1,26 +1,38 @@
 import React from 'react';
-import { useHistory } from "react-router-dom"
-import useAuth from '../../hooks/useAuth'
+import { useState, useEffect } from 'react';
+import { useHistory } from "react-router-dom";
+import { PRODUCTS } from '../../core/utils/product';
+import Box from '../../components/commons/box';
+
 function Login() {
   const history = useHistory();
-  const adminUser = {
-    email: 'lieu.phan@monstar-lab.com',
-    password: '1111'
-  }
-  const auth = useAuth();
-  const handelLogout = () => {
-    auth.logout();
-    history.push('/auth/login')
-  }
-  function goHome () {
-    history.push('/')
-  }
+  const [products, setProductFav] = useState([])
+  useEffect(() => {
+    const proFav = []
+    PRODUCTS.map(p => {
+      if(p.favorite) {
+        proFav.push(p)
+      }
+    })
+    setProductFav(proFav)
+  }, [products])
+
+
   return (
     <div className="container page-account">
-      <h2>{ adminUser.email }</h2>
-      <h2>{ adminUser.password }</h2>
-      <button className="mr-10" onClick={() => goHome()}>Home</button>
-      <button onClick={() => handelLogout()}>Logout</button>
+      <h2 className="text-center pt-4">LIST FAVORITED</h2>
+      { products.length ?
+        <ul className="users row">
+          {
+            products.map((p) => 
+              <li key={p.id} className="box col-3">
+                <Box product={p} />
+              </li>
+            )
+          }
+        </ul>
+      : <p class="text-center fs-20">Your favorite product list is currently empty</p>
+      }
     </div>
   );
 }
