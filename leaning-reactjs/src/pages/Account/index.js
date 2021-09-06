@@ -1,6 +1,5 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-// import { useHistory } from "react-router-dom";
 import { PRODUCTS } from '../../core/utils/product';
 import Box from '../../components/commons/box';
 
