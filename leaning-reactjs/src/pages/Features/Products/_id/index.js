@@ -1,7 +1,6 @@
 import {
   useParams
 } from "react-router-dom";
-// import { FaHeart } from 'react-icons/fa';
 import { useState, useEffect } from "react";
 import { PRODUCTS } from "../../../../core/utils/product";
 // import { useDispatch } from 'react-redux';
