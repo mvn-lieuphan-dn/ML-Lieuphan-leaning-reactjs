@@ -11,8 +11,8 @@ export default function ProductDetail() {
     PRODUCTS.map(p => {
       if (p.id === Number(id)) {
         setProduct(p)
-        return
       }
+      return 0
     })
   }, [])
   return (

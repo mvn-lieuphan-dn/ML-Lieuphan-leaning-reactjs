@@ -11,8 +11,8 @@ function Login() {
     PRODUCTS.map(p => {
       if(p.favorite) {
         proFav.push(p)
-        return
       }
+      return 0
     })
     setProductFav(proFav)
   }, [])
