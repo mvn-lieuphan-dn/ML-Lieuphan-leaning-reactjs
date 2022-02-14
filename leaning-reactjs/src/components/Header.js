@@ -1,18 +1,15 @@
 import logo from './../assets/images/logo_img.png';
 import { NavLink } from "react-router-dom";
 import { useSelector } from 'react-redux';
-import { useHistory } from "react-router-dom"
 import { FaUser, FaHeart, FaUserCircle } from 'react-icons/fa';
 import useAuth from '../hooks/useAuth';
 
 export default function Header() {
   const auth = useAuth();
-  const history = useHistory();
   const checkLogin = useSelector((state) => state.isLogined.value);
   const favs = useSelector(state => state.fav.value);
   function handelLogout() {
     auth.logout();
-    history.push('/auth/login')
   }
 
   return (
