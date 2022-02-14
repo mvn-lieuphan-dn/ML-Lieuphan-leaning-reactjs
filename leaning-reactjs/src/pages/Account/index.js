@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import { PRODUCTS } from '../../core/utils/product';
 import Box from '../../components/commons/box';
 
-function Login() {
+function Account() {
   const [products, setProductFav] = useState([])
   useEffect(() => {
     const proFav = []
@@ -31,9 +31,9 @@ function Login() {
             )
           }
         </ul>
-      : <p class="text-center fs-20">Your favorite product list is currently empty</p>
+      : <p className="text-center fs-20">Your favorite product list is currently empty</p>
       }
     </div>
   );
 }
-export default Login;
+export default Account;
