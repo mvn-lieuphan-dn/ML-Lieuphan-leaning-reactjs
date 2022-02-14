@@ -1,21 +1,22 @@
 import React from "react"
-import Main from '../../components/Main'
-import Products from '../../pages/Features/Products/index'
-import ProductsDetail from '../../pages/Features/Products/_id/index'
-import { Route, BrowserRouter } from "react-router-dom";
+import { Switch, Route } from "react-router-dom"
+
+const Main = React.lazy(() => import('../../components/Main'));
+const Products = React.lazy(() => import('../../pages/Features/Products/index'));
+const ProductsDetail = React.lazy(() => import('../../pages/Features/Products/_id/index'));
 function Features() {
   return (
-    <div className="App">
-    <BrowserRouter>
-      <Route exact path="/">
+    <React.Suspense fallback={<span>Loading...</span>}>
+      <Switch>
+        <Route exact path="/">
         <Main />
       </Route>
       <Route exact path="/products">
         <Products />
       </Route>
       <Route exact path="/products/:id" children={<ProductsDetail />} />
-    </BrowserRouter>
-    </div>
+      </Switch>
+    </React.Suspense>
   );
 }
 

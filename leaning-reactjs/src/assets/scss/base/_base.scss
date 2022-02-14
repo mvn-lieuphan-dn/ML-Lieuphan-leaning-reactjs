@@ -18,6 +18,10 @@ ul {
 a {
   color: map-get($colors, txt-black);
   text-decoration: none;
+  &:hover {
+    color: map-get($colors, txt-black);
+    text-decoration: none;
+  }
 }
 img {
   max-width: 100%;

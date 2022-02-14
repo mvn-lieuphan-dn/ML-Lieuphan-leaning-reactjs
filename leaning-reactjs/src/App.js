@@ -4,28 +4,30 @@ import Footer from './components/Footer'
 import './assets/scss/styles.scss'
 import Features from './pages/Features'
 import Account from './pages/Account/index'
-import {BrowserRouter, Route } from "react-router-dom"
+import { Switch, Route } from "react-router-dom"
 import PrivateRoute from "./guard/PrivateRoute"
 import Auth from "./pages/Auth/index"
 function App() {
   return (
-    <div className="App">
+    <div>
       <Header />
-      <main className="page-main flex-centered">
-        <BrowserRouter>
-          <PrivateRoute path="/account">
-            <Route path="/">
-              <Account />
+      <div className="page-main flex-centered">
+        <Switch>
+          <React.Suspense fallback={<span>Loading...</span>}>
+            <PrivateRoute path="/account">
+              <Route path="/">
+                <Account />
+              </Route>
+            </PrivateRoute>
+            <Route path="/auth">
+              <Auth />
             </Route>
-          </PrivateRoute>
-          <Route path="/auth">
-            <Auth />
-          </Route>
-          <Route path="/">
-            <Features />
-          </Route>
-        </BrowserRouter>
-      </main>
+            <Route path="/">
+              <Features />
+            </Route>
+          </React.Suspense>
+        </Switch>
+      </div>
       <Footer />
     </div>
   );
